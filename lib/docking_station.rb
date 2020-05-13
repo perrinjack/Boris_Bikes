@@ -1,5 +1,4 @@
 require './bike.rb'
-
 class DockingStation
   attr_reader :bike
 
@@ -8,6 +7,7 @@ class DockingStation
   end
 
   def release_bike
-    Bike.new
+    fail "No bikes, no worries" unless @bike
+    @bike
   end
 end

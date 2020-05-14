@@ -23,7 +23,8 @@ describe DockingStation do
     it { is_expected.to respond_to :dock}
 
     it 'raises error when no spaces are available' do
-      20.times {docking_instance.dock Bike.new}
+
+      DockingStation::DEFAULT_CAPACITY.times {docking_instance.dock Bike.new}
       expect{ docking_instance.dock Bike.new }.to raise_error "No spaces to dock"
     end
   end

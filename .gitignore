@@ -1,3 +1,4 @@
 /.rubocop_todo.yml
 /.rubocop.yml
 rough.md
+.vscode/settings.json
